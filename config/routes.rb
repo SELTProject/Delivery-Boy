@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #root :to => 'preorder#index'
   root :to => redirect('/home')
   resources :users
-  match '/home', to: 'users#index', via: :get
+  match '/home', to: 'visitors#index', via: :get
   
   #match '/login', to: 'sessions#new', via: :get
   #match '/login_create', to: 'sessions#create', via: :post
