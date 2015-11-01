@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %title LocalDeliverySystem
+    %link{:type => "text/css", :rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"}
+    = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body
+    %nav{:class => 'navbar navbar-inverse navbar-fixed-top'}
+      %div{:class => 'container'}
+        %div{:class => 'navbar-header'}
+          %button{:class => 'navbar-toggle collapsed', 'data-toggle'.to_sym => 'collapse', 'data-target'.to_sym => '#navbar', 'aria-expanded'.to_sym => 'false', 'aria-controls'.to_sym => 'navbar'}
+            %span{:class => 'sr-only'} Toggle Navigation
+            %span{:class => 'icon-bar'}
+            %span{:class => 'icon-bar'}
+            %span{:class => 'icon-bar'}
+          %a{:class => 'navbar-brand', :href => '#'} Local Delivery System (Alpha)
+        %div{:class => 'collapse navbar-collapse', :id => 'navbar'}
+          %ul{:class => 'nav navbar-nav'}
+            %li{:class => 'active'}
+              %a{:href => '#'} Home
+            %li
+              %a{:href => '#about'} About
+            %li
+              %a{:href => '#contact'} Contact
+    %div{:class => 'container'}
+      - if notice
+        %p{:class => 'alert alert-success'} notice
+      - if alert
+        %p{:class => 'alert alert-danger'} alert
+
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
+      %div{:class => 'container'}
+        = yield
+    
+    %footer
+      %div{:class => 'container'}LocalDeliverySystem 2015
+
+    %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
