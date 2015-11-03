@@ -52,7 +52,8 @@ end
 
 group :test do
   gem 'rspec-expectations'
-  gem 'cucumber-rails' 
+  gem 'cucumber-rails'
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :development do
@@ -64,6 +65,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg' # for Heroku deployment
+#  gem 'pg' # for Heroku deployment
   gem 'rails_12factor'
 end
