@@ -11,4 +11,4 @@ Feature: Customer Login
     |Password|123456789|
   And I press "Login"
   Then I should see "Signed in successfully."
-  And I should be ridirected to "mypage."
+  
