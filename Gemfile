@@ -47,12 +47,15 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-  gem 'rspec-rails'
+  gem 'cucumber-rails', :require => false
+  #gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :test do
   gem 'rspec-expectations'
-  gem 'cucumber-rails' 
+  
+  gem 'simplecov', :require => false
 end
 
 group :development do
@@ -64,6 +67,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg' # for Heroku deployment
+#  gem 'pg' # for Heroku deployment
   gem 'rails_12factor'
 end
