@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users,
+             :controllers => {:registrations => "custom_devise/registrations"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   root :to => redirect('/home')
   resources :users
   match '/home', to: 'visitors#index', via: :get
-  
+
   #match '/login', to: 'sessions#new', via: :get
   #match '/login_create', to: 'sessions#create', via: :post
   #match '/logout', to: 'sessions#destroy', via: :delete

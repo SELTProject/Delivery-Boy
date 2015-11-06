@@ -21,13 +21,12 @@ ActiveRecord::Schema.define(version: 20151106024712) do
 
   create_table "rolesusers", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "role_id"
+    t.string   "role_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "user_id"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "phone_number"
