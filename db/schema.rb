@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(version: 20151106024712) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "roles_users", force: :cascade do |t|
+    t.string "user_id"
+    t.string "role_id"
+  end
+
   create_table "rolesusers", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "role_id"
@@ -27,13 +32,11 @@ ActiveRecord::Schema.define(version: 20151106024712) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "password_digest"
+    t.string   "session_token"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "phone_number"
-    t.string   "address_line1"
-    t.string   "address_line2"
-    t.string   "zip_code"
-    t.string   "city"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false

@@ -47,9 +47,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-  gem 'cucumber-rails', :require => false
-  #gem 'rspec-rails'
   gem 'rspec-rails', '~> 3.0'
+<<<<<<< HEAD
 end
 
 group :test do
@@ -59,6 +58,20 @@ group :test do
 end
 
 group :development do
+||||||| merged common ancestors
+end
+
+group :test do
+  gem 'rspec-expectations'
+  
+  gem 'simplecov', :require => false
+end
+
+group :development do
+=======
+  gem 'simplecov', :require => false, :group => :test
+  
+>>>>>>> 55b2f82e8adece65f8f657eafce044adf2f07764
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -66,7 +79,12 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'rspec-expectations'
+  gem 'cucumber-rails' 
+end
+
 group :production do
-#  gem 'pg' # for Heroku deployment
+  gem 'pg' # for Heroku deployment
   gem 'rails_12factor'
 end
