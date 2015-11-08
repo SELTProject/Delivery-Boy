@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 #A gem devise
 gem 'devise'
-
+gem "factory_girl_rails", "~> 4.0"
 # Use Haml as the templating library
 gem 'haml'
 
@@ -54,7 +54,7 @@ end
 
 group :test do
   gem 'rspec-expectations'
-  
+
   gem 'simplecov', :require => false
 end
 
