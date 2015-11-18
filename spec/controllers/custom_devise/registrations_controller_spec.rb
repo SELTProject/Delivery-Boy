@@ -1,6 +1,6 @@
 require 'rails_helper'
-require "spec_helper"
 RSpec.describe CustomDevise::RegistrationsController, type: :controller do
+
   describe "User registration page" do
     it "allows new users to register" do
       @request.env["devise.mapping"] = Devise.mappings[:user]
@@ -23,7 +23,7 @@ RSpec.describe CustomDevise::RegistrationsController, type: :controller do
       get :new
       expect(response).to render_template("custom_devise/registrations/new")
       post :create, {:user => {:first_name => "Balaji", :last_name => "T", :email => "bala92@gmail.com", :password => "password", :password_confirmation => "password", :rid=> "customer"}}
-      expect(response).to redirect_to("/")
+      expect(response).to redirect_to("devise/sessions/new")
     end
   end
 

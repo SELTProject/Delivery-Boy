@@ -3,9 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :lockable
-  has_and_belongs_to_many :roles
-
+  has_and_belongs_to_many :roles, :join_table => "rolesusers"
+  has_one :driverdetail
   attr_accessor :rid
-  
   validates :first_name, :last_name, presence: true
 end

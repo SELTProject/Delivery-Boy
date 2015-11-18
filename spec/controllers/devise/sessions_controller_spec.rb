@@ -1,6 +1,6 @@
 require 'rails_helper'
-
 RSpec.describe Devise::SessionsController, type: :controller do
+
   describe "user login page" do
     it "allows users to login with an email address and password" do
       @request.env["devise.mapping"] = Devise.mappings[:user]
@@ -26,4 +26,5 @@ RSpec.describe Devise::SessionsController, type: :controller do
       expect(response).to redirect_to("/")
     end
   end
+
 end
