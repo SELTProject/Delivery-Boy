@@ -15,6 +15,11 @@ class CustomDevise::RegistrationsController < Devise::RegistrationsController
     #   @rolesuser.save
       end
   end
+  
+  #def after_sign_in_path_for(resource_or_scope)
+  #  session[:my_account] = current_user.account
+  #  profile_url
+  #end
 
   def destroy
     super
