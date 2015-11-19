@@ -28,18 +28,22 @@ class ApplicationController < ActionController::Base
 
   #def check_details_present
   def after_sign_in_path_for(resource_or_scope)
-    rolesusers = Rolesuser.find_by_user_id(current_user.id)
+    rolesusersArr = current_user.roles
+    rolesusers = rolesusersArr[0]
+    #rolesusers = Rolesuser.find_by_user_id(current_user.id)
     logger.debug "Inside after_sign_in_path_for"
     if !rolesusers.blank?
-      if rolesusers.role_id = "customer"
+      #if rolesusers.role_id = "customer"
+      if rolesusers.name == "customer"
         logger.debug "Logged in as Customer"
         session[:user_role] = "customer"
         return edit_user_registration_url
-      elsif rolesusers.role_id = "driver"
+      elsif rolesusers.name == "driver"
         logger.debug "Logged in as Driver"
         session[:user_role] = "driver"
-        return edit_user_registration_url
-      else rolesusers.role_id = "businessowner"
+        return new_driverdetail_url
+        #return edit_user_registration_url
+      else #rolesusers.name == "businessowner"
         logger.debug "Logged in as Business Owner"
         session[:user_role] = "businessowner"
         return edit_user_registration_url
