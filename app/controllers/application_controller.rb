@@ -2,9 +2,9 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  before_filter :checkdetails
+  #before_filter :checkdetails
 
-  def checkdetails
+  #def checkdetails
     # if user_signed_in?
     #   rolesusersArr = current_user.roles
     #   rolesusers = rolesusersArr[0]
@@ -31,8 +31,7 @@ class ApplicationController < ActionController::Base
     #     end
     #   end
     # end
-  end
-
+  #end
 
   # def after_sign_in_path_for(resource)
   #   new_driverdetail_path
@@ -60,7 +59,7 @@ class ApplicationController < ActionController::Base
       if rolesusers.name == "customer"
         logger.debug "Logged in as Customer"
         session[:user_role] = "customer"
-        return edit_user_registration_url
+        return home_url
       elsif rolesusers.name == "driver"
         logger.debug "Logged in as Driver"
         session[:user_role] = "driver"
@@ -71,14 +70,21 @@ class ApplicationController < ActionController::Base
           return home_url
         end 
         #return edit_user_registration_url
-      else #rolesusers.name == "businessowner"
+      elsif rolesusers.name == "businessowner"
+      #else rolesusers.name == "businessowner"
         logger.debug "Logged in as Business Owner"
         session[:user_role] = "businessowner"
-        return edit_user_registration_url
+        businessdetail = Businessdetail.find_by_user_id(current_user.id)
+        if businessdetail.blank?
+          return new_businessdetail_url
+        else
+          return home_url
+        end
+      else
+        return home_url
       end
     end
   end
-
 
   #layout :layout_by_resource
 
