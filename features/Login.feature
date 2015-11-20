@@ -2,19 +2,27 @@ Feature: As a customer
     So that i can access the application
     I want to have a login page
     
-Background: users have been added to the database
+#Background: users have been added to the database
   
-  Given I am on the signup page
-  When I have entered the first name "xyz", last name "aaa", Email "xyz@aaa.com", User type "customer", Passsword "123456789"
-  And I have clicked on the signup button
-  And I press logout
+# Given I am on the signup page
+ # When I have entered the first name "Rishabh", last name "Singh", Email "rishabh.zhcet@gmail.com", User type "customer", Passsword "123456789"
+#  And I have clicked on the signup button
+ Background: Signing in via confirmation
+    Given I am on the signup page
+    And  I have entered the first name "Rishabh", last name "Singh", Email "rishabh.zhcet@gmail.com", User type "customer", Passsword "123456789"
+    And I have clicked on the signup button
+    And "rishabh.zhcet@gmail.com" opens the email with subject "Confirmation instructions"
+    And they click the first link in the email
+    Then I should see Your account was successfully confirmed.
+   
+  
 
 Scenario: Correct Password
   
   Given I am on Login Page
-  When I have entered the email "xyz@aaa.com" and the password "123456789"
+  When I have entered the email "rishabh.zhcet@gmail.com" and the password "123456789"
   And I press Login button
-  Then I should see logged in and redirected to home
+  Then I should see logged in and redirected to editprofile
   
 Scenario: Wrong Password
   Given I am on Login Page

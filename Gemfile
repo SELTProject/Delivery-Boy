@@ -54,6 +54,7 @@ group :test do
   gem 'rspec-expectations'
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
+  gem 'email_spec'
 end
 
 group :development do
