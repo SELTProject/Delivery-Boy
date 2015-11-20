@@ -1,0 +1,41 @@
+<div class="col-sm-offset-6 col-sm-6">
+  <h2>Hire Drivers</h2>
+</div>
+<%= form_for(resource, as: resource_name, url: hire_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= f.label :Item_toDeliver, class: "col-sm-4 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :Item_toDeliver, class: "form-control", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Place_fromDelivery, class: "col-sm-4 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :Place_fromDelivery, class: "form-control", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Place_toDeliver, class: "col-sm-4 control-label" %>
+    <div class="col-sm-6">
+      <%= f.email_field :Place_toDeliver, class: "form-control", autofocus: true %>
+    </div>
+  </div>
+
+  
+
+  <div class="actions">
+    <div class="col-sm-offset-4 col-sm-6">
+      <%= f.submit "FindTheDriver", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+
+<div class="form-group">
+    <div class="col-sm-offset-4 col-sm-6">
+        <%= render "devise/shared/links" %>
+    </div>
+</div>
