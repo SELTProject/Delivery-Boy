@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20151115182143) do
   create_table "driverdetails", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "vehicle_no"
-    t.string   "lisense_id"
+    t.string   "license_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
