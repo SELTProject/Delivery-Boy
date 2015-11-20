@@ -24,7 +24,9 @@ class DriverdetailsController < ApplicationController
   end
 
   def update
-    driverdetail = Driverdetail.new(params[:driverdetail]);
+    logger.debug "driverdetail_params = "
+    logger.debug driverdetail_params
+    driverdetail = Driverdetail.new(driverdetail_params)
     
     @user = current_user
     @user.driverdetail = driverdetail

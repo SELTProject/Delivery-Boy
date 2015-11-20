@@ -24,10 +24,13 @@ class BusinessdetailsController < ApplicationController
   end
 
   def update
-    businessdetail = Businessdetail.new(params[:businessdetail]);
-    
+    logger.debug "businessdetail_params = "
+    logger.debug businessdetail_params
+    businessdetail = Businessdetail.find_by_user_id(current_user.id)
+
     @user = current_user
-    @user.businessdetail = businessdetail
+    @user.businessdetail.update_attributes!(businessdetail_params)
+    #@user.businessdetail = businessdetail
     flash[:notice] = "Your details were successfully updated."
     redirect_to home_path
   end

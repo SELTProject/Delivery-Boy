@@ -48,6 +48,12 @@
           <ul class="nav navbar-nav pull-right">
             <% if user_signed_in? %>
               <li class="center-align-text"><a href="#"><span class="label label-default">Logged in as <%= current_user.email %>.</span></a></li>
+              <% if session[:user_role] == "businessowner" %>
+                <li><%= link_to 'Business Details', edit_businessdetail_path %></li>
+              <% end %>
+              <% if session[:user_role] == "driver" %>
+                <li><%= link_to 'Driver Details', edit_driverdetail_path %></li>
+              <% end %>
               <li><%= link_to 'Edit profile', edit_user_registration_path%></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
             <% else %>
