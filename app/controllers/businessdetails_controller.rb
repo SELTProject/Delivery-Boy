@@ -9,6 +9,7 @@ class BusinessdetailsController < ApplicationController
   end
   
   def create
+    logger.debug "Inside create businessdetails"
     logger.debug "businessdetail_params = "
     logger.debug businessdetail_params
     businessdetail = Businessdetail.new(businessdetail_params)
@@ -24,9 +25,10 @@ class BusinessdetailsController < ApplicationController
   end
 
   def update
+    logger.debug "Inside update businessdetails"
     logger.debug "businessdetail_params = "
     logger.debug businessdetail_params
-    businessdetail = Businessdetail.find_by_user_id(current_user.id)
+    #businessdetail = Businessdetail.find_by_user_id(current_user.id)
 
     @user = current_user
     @user.businessdetail.update_attributes!(businessdetail_params)

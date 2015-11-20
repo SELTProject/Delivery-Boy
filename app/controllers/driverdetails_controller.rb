@@ -9,6 +9,7 @@ class DriverdetailsController < ApplicationController
   end
   
   def create
+    logger.debug "Inside create driverdetails"
     logger.debug "driverdetail_params = "
     logger.debug driverdetail_params
     driverdetail = Driverdetail.new(driverdetail_params)
@@ -24,13 +25,13 @@ class DriverdetailsController < ApplicationController
   end
 
   def update
+    logger.debug "Inside update driverdetails"
     logger.debug "driverdetail_params = "
     logger.debug driverdetail_params
-    driverdetail = Driverdetail.new(driverdetail_params)
+    #driverdetail = Driverdetail.find_by_user_id(current_user.id)
     
     @user = current_user
-    @user.driverdetail = driverdetail
-    #@movie.update_attributes!(movie_params)
+    @user.driverdetail.update_attributes(driverdetail_params)
     flash[:notice] = "Your details were successfully updated."
     redirect_to home_path
   end
