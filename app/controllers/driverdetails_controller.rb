@@ -1,7 +1,7 @@
 class DriverdetailsController < ApplicationController
 
-  def movie_params
-    params.require(:movie).permit(:title, :rating, :description, :release_date)
+  def driverdetail_params
+    params.require(:driverdetail).permit(:vehicle_no, :license_id)
   end
 
   def new
@@ -9,9 +9,13 @@ class DriverdetailsController < ApplicationController
   end
   
   def create
-    @driverdetail;
+    logger.debug "Inside create driverdetails"
+    logger.debug "driverdetail_params = "
+    logger.debug driverdetail_params
+    driverdetail = Driverdetail.new(driverdetail_params)
+    
     @user = current_user
-    @user.driverdetail << @driverdetail
+    @user.driverdetail = driverdetail
     flash[:notice] = "Your details were successfully created."
     redirect_to home_path
   end
@@ -21,10 +25,13 @@ class DriverdetailsController < ApplicationController
   end
 
   def update
-    @driverdetail;
+    logger.debug "Inside update driverdetails"
+    logger.debug "driverdetail_params = "
+    logger.debug driverdetail_params
+    #driverdetail = Driverdetail.find_by_user_id(current_user.id)
+    
     @user = current_user
-    @user.driverdetail << @driverdetail
-    #@movie.update_attributes!(movie_params)
+    @user.driverdetail.update_attributes(driverdetail_params)
     flash[:notice] = "Your details were successfully updated."
     redirect_to home_path
   end

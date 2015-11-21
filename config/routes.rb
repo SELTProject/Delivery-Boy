@@ -9,8 +9,23 @@ Rails.application.routes.draw do
   #root :to => 'preorder#index'
   root :to => redirect('/home')
   resources :users
-  resources :driverdetails
+  #resources :businessdetails
+  #resources :driverdetails
   match '/home', to: 'visitors#index', via: :get
+  
+  #match "/:space_type/:id", :to => "spaces#show", :as => :space_type
+  
+  get '/businessdetails/new' => 'businessdetails#new', as: 'new_businessdetail'
+  post '/businessdetails' => 'businessdetails#create', as: 'businessdetails'
+  get '/businessdetails/edit' => 'businessdetails#edit', as: 'edit_businessdetail'
+  put '/businessdetails' => 'businessdetails#update', as: 'businessdetail'
+  patch '/businessdetails' => 'businessdetails#update'
+
+  get '/driverdetails/new' => 'driverdetails#new', as: 'new_driverdetail'
+  post '/driverdetails' => 'driverdetails#create', as: 'driverdetails'
+  get '/driverdetails/edit' => 'driverdetails#edit', as: 'edit_driverdetail'
+  put '/driverdetails' => 'driverdetails#update', as: 'driverdetail'
+  patch '/driverdetails' => 'driverdetails#update'
 
   #match '/login', to: 'sessions#new', via: :get
   #match '/login_create', to: 'sessions#create', via: :post

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :lockable
   has_and_belongs_to_many :roles, :join_table => "rolesusers"
   has_one :driverdetail
+  has_one :businessdetail
+
   attr_accessor :rid
   validates :first_name, :last_name, presence: true
 end

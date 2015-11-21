@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115182143) do
+ActiveRecord::Schema.define(version: 20151120035020) do
+
+  create_table "businessdetails", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "business_name"
+    t.string   "address_line_1"
+    t.string   "address_line_2"
+    t.string   "zip_code"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "driverdetails", force: :cascade do |t|
     t.integer  "user_id"
@@ -29,7 +42,7 @@ ActiveRecord::Schema.define(version: 20151115182143) do
 
   create_table "rolesusers", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "role_id"
+    t.integer  "role_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

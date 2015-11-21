@@ -11,7 +11,11 @@ class CustomDevise::RegistrationsController < Devise::RegistrationsController
     #   #@rolesuser.role_id = 1
         Rails.logger.debug "account: #{@rid}"
         @user = User.find(resource.id)
-        @user.roles << Role.find_by_name(@rid)
+        if Role.find_by_name(@rid)
+          @user.roles << Role.find_by_name(@rid)
+        else
+          flash[:notice] = "Oops! Please try again after some time."
+        end
     #   @rolesuser.save
       end
   end

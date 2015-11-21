@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="LocalDeliverySystem - A portal where you can search and hire drivers for delivering goods/food locally">
+    <meta name="description" content="LocalDeliverySystem - A portal where you can search and hire drivers for delivering food locally">
     <meta name="author" content="">
 
-    <title>LocalDeliverySystem</title>
+    <title>Delivery Boy</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -36,9 +36,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Local Delivery System (Alpha)</a>
+          <a class="navbar-brand" href="/">Delivery Boy (Alpha)</a>
         </div>
-        
+
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/home">Home</a></li>
@@ -48,6 +48,12 @@
           <ul class="nav navbar-nav pull-right">
             <% if user_signed_in? %>
               <li class="center-align-text"><a href="#"><span class="label label-default">Logged in as <%= current_user.email %>.</span></a></li>
+              <% if session[:user_role] == "businessowner" %>
+                <li><%= link_to 'Business Details', edit_businessdetail_path %></li>
+              <% end %>
+              <% if session[:user_role] == "driver" %>
+                <li><%= link_to 'Driver Details', edit_driverdetail_path %></li>
+              <% end %>
               <li><%= link_to 'Edit profile', edit_user_registration_path%></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
             <% else %>
