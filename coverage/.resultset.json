@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/controllers/application_controller_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/application_controller_spec.rb": [
         1,
         1,
         null,
@@ -26,7 +26,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/rails_helper.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -85,47 +85,49 @@
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/environment.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/environment.rb": [
         null,
         1,
         null,
         null,
-        1
-      ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/application.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/environments/test.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/application.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/boot.rb": [
+        1,
+        null,
+        1
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/environments/test.rb": [
         1,
         null,
         null,
@@ -186,7 +188,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/assets.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -199,7 +201,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/backtrace_silencers.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -207,12 +209,12 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/cookies_serializer.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/devise.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -476,13 +478,13 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/filter_parameter_logging.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/inflections.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -500,18 +502,18 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/mime_types.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/session_store.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/initializers/wrap_parameters.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -527,7 +529,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/factories/driverdetails.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/factories/driverdetails.rb": [
         1,
         1,
         null,
@@ -535,7 +537,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/factories/user.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/factories/user.rb": [
         1,
         null,
         1,
@@ -547,7 +549,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/config/routes.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/config/routes.rb": [
         1,
         1,
         null,
@@ -631,7 +633,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/models/user.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/models/user.rb": [
         1,
         null,
         null,
@@ -645,19 +647,19 @@
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/helpers/application_helper.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/helpers/driverdetails_helper.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/helpers/driverdetails_helper.rb": [
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/helpers/users_helper.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/controllers/application_controller.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -742,122 +744,6 @@
         null,
         null,
         0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/controllers/businessdetails_controller_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/controllers/businessdetails_controller.rb": [
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/controllers/custom_devise/registrations_controller_spec.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         null,
@@ -875,7 +761,123 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/controllers/custom_devise/registrations_controller.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/businessdetails_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/controllers/businessdetails_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/custom_devise/registrations_controller_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/controllers/custom_devise/registrations_controller.rb": [
         1,
         null,
         1,
@@ -925,14 +927,14 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/controllers/devise/passwords_controller_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/devise/passwords_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/controllers/devise/sessions_controller_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/devise/sessions_controller_spec.rb": [
         1,
         1,
         null,
@@ -964,7 +966,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/controllers/driverdetails_controller_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/driverdetails_controller_spec.rb": [
         1,
         null,
         1,
@@ -990,7 +992,7 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/controllers/driverdetails_controller.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/controllers/driverdetails_controller.rb": [
         1,
         null,
         1,
@@ -1031,35 +1033,18 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/controllers/users_controller_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/controllers/users_controller.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/controllers/users_controller.rb": [
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/helpers/driverdetails_helper_spec.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/helpers/users_helper_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/helpers/driverdetails_helper_spec.rb": [
         1,
         null,
         null,
@@ -1076,12 +1061,7 @@
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/models/businessdetail_spec.rb": [
-        null,
-        1,
-        null,
-        1,
-        1,
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/helpers/users_helper_spec.rb": [
         1,
         null,
         null,
@@ -1089,56 +1069,17 @@
         null,
         null,
         null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
         null,
-        null
-      ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/models/businessdetail.rb": [
-        1,
-        1,
         null,
+        null,
+        1,
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/models/driverdetail_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/businessdetail_spec.rb": [
+        null,
         1,
         null,
         1,
@@ -1146,6 +1087,34 @@
         1,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         null,
         null,
@@ -1164,14 +1133,47 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/models/driverdetail.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/models/businessdetail.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/models/role_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/driverdetail_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/models/driverdetail.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/role_spec.rb": [
         1,
         null,
         1,
@@ -1184,12 +1186,12 @@
         null,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/app/models/role.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/models/role.rb": [
         1,
         1,
         null
       ],
-      "/Users/balaji/Desktop/git-repos/LocalDeliverySystem/spec/models/user_spec.rb": [
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/user_spec.rb": [
         1,
         1,
         1,
@@ -1234,6 +1236,6 @@
         null
       ]
     },
-    "timestamp": 1448077871
+    "timestamp": 1448082548
   }
 }
