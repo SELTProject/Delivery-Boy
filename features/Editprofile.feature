@@ -1,12 +1,16 @@
 Feature: As a customer
 So that i can update my profile information
 I want to have a edit my profile feature
-Background: users have been added to the database
-  
-  Given I am on the signup page
-  When I have entered the first name "xyz", last name "aaa", Email "xyz@aaa.com", User type "customer", Passsword "123456789", and Password confirmation "123456789"
-  And I have clicked on the signup button
-  
+ Background: Signing in via confirmation
+    Given I am on the signup page
+    And  I have entered the first name "abc", last name "abc", Email "abc.abc@gmail.com", User type "customer", Passsword "123456789"
+    And I have clicked on the signup button
+    And "abc.abc@gmail.com" opens the email with subject "Confirmation instructions"
+    And they click the first link in the email
+    Then I should see Your account was successfully confirmed.
+    And I am on Login Page
+    And I have entered the email "abc.abc@gmail.com" and the password "123456789"
+    And I press Login button
 
 Scenario: Update Password
   When I click on Edit profile

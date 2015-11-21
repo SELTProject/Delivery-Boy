@@ -55,6 +55,7 @@ group :test do
   gem 'rspec-expectations'
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
+  gem 'email_spec'
 end
 
 group :development do
@@ -65,8 +66,6 @@ group :development do
 end
 
 group :production do
-
   gem 'pg' # for Heroku deployment
-  #  gem 'pg' # for Heroku deployment
   gem 'rails_12factor'
 end

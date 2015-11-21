@@ -1,9 +1,19 @@
-
+When /^(?:I|they|"([^"]*?)") opens? the email with subject "([^"]*?)"$/ do |address, subject|
+  open_email(address, :with_subject => subject)
+end
+When /^(?:I|they) click the first link in the email$/ do
+  click_first_link_in_email
+end
+Then /^I should see Your account was successfully confirmed.$/ do
+  expect(page).to have_content("Your email address has been successfully confirmed.")
+   
+end
 Given /^I am on HomePage$/ do
   visit home_path
 end
 
 Given /^I am on Login Page$/ do
+  
   visit user_session_path
 end
 
@@ -16,8 +26,10 @@ When /^I press Login button$/ do
   click_button "login_btn"
 end
 
-Then /^I should see logged in and redirected to home$/ do
-  expect(page).to have_content("Logged in as xyz@aaa.com.")
+Then /^I should see logged in and redirected to editprofile/ do
+  expect(page).to have_content("Signed in successfully.")
+ # expect(page).to have_content("Local Delivery System (Alpha)")
+  
 end
 
 Then /^I got to login page$/ do
@@ -48,10 +60,18 @@ Given /^I am on the signup page$/ do
 end
 
 When /^I have entered the first name "(.*?)", last name "(.*?)", Email "(.*?)", User type "(.*?)", Passsword "(.*?)"$/ do |firstname, lastname, email, usertype, password|
+  roles = [{:name => 'customer'},
+    	  {:name => 'driver'},
+    	  {:name => 'businessowner'}]
+
+  roles.each do |role|
+    Role.create!(role)
+  end
   fill_in 'user_first_name', :with => firstname
   fill_in 'user_last_name', :with => lastname
   fill_in 'user_email', :with => email
-  select usertype, from: "user_rid"
+  select usertype, :from => "user_rid"
+  #find('user[rid]').find(:xpath, usertype).select_option
   fill_in 'user_password', :with => password
   fill_in 'user_password_confirmation', :with => password
 end
@@ -60,8 +80,8 @@ When /^I have clicked on the signup button$/ do
   click_button 'Sign up'
 end
 
-Then /^I should see logged$/ do
-  expect(page).to have_content("Logged in as xyz@aaa.com.")
+Then /^I should see confirmation link message$/ do
+  expect(page).to have_content("A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.")
 end
 
 When /^I click on Edit profile$/ do
@@ -76,7 +96,7 @@ When /^press Update$/ do
   click_button "Update"
 end
 Then /^I must have updated password$/ do
-   expect(page).to have_content("Logged in as xyz@aaa.com.")
+   expect(page).to have_content("Your account has been updated successfully.")
 
 end
 When /^I write wrong current password "(.*?)"$/ do |currpass|
