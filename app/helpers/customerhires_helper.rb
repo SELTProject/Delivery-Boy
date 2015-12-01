@@ -1,0 +1,2 @@
+module CustomerhiresHelper
+end

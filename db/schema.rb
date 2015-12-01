@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120035020) do
+ActiveRecord::Schema.define(version: 20151201034456) do
 
   create_table "businessdetails", force: :cascade do |t|
     t.integer  "user_id"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(version: 20151120035020) do
     t.string   "country"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "customerhires", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "no_items"
+    t.string   "restaurant_name"
+    t.string   "restaurant_address1"
+    t.string   "restaurant_address2"
+    t.integer  "restaurant_pin"
+    t.string   "order_status",        default: "open"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "driverdetails", force: :cascade do |t|

@@ -1,0 +1,46 @@
+<div class="col-sm-offset-6 col-sm-6">
+  <h2>Customer Hire</h2>
+</div>
+<%= form_for(@customerhire, html: {class: 'form-horizontal'}) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :no_items, "No. of Items", class: "col-sm-4 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :no_items, class: "form-control", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :restaurant_name, class: "col-sm-4 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :restaurant_name, class: "form-control", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :restaurant_address1, class: "col-sm-4 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :restaurant_address1, class: "form-control", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :restaurant_address2, class: "col-sm-4 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :restaurant_address2, class: "form-control", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :restaurant_pin, class: "col-sm-4 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :restaurant_pin, class: "form-control", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <div class="col-sm-offset-4 col-sm-6">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

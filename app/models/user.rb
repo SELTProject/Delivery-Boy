@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles, :join_table => "rolesusers"
   has_one :driverdetail
   has_one :businessdetail
+  has_many :customerhires
 
   attr_accessor :rid
   validates :first_name, :last_name, presence: true

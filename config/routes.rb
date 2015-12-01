@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   #resources :businessdetails
   #resources :driverdetails
   match '/home', to: 'visitors#index', via: :get
-  
+
   #match "/:space_type/:id", :to => "spaces#show", :as => :space_type
-  
+
   get '/businessdetails/new' => 'businessdetails#new', as: 'new_businessdetail'
   post '/businessdetails' => 'businessdetails#create', as: 'businessdetails'
   get '/businessdetails/edit' => 'businessdetails#edit', as: 'edit_businessdetail'
@@ -26,6 +26,10 @@ Rails.application.routes.draw do
   get '/driverdetails/edit' => 'driverdetails#edit', as: 'edit_driverdetail'
   put '/driverdetails' => 'driverdetails#update', as: 'driverdetail'
   patch '/driverdetails' => 'driverdetails#update'
+
+  get '/customerhires/new' => 'customerhires#new', as: 'new_customerhire'
+  post '/customerhires' => 'customerhires#create', as: 'customerhires'
+
 
   #match '/login', to: 'sessions#new', via: :get
   #match '/login_create', to: 'sessions#create', via: :post

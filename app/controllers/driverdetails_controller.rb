@@ -13,7 +13,7 @@ class DriverdetailsController < ApplicationController
     logger.debug "driverdetail_params = "
     logger.debug driverdetail_params
     driverdetail = Driverdetail.new(driverdetail_params)
-
+    
     @user = current_user
     @user.driverdetail = driverdetail
     flash[:notice] = "Your details were successfully created."
