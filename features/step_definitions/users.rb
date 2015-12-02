@@ -6,7 +6,22 @@ When /^(?:I|they) click the first link in the email$/ do
 end
 Then /^I should see Your account was successfully confirmed.$/ do
   expect(page).to have_content("Your email address has been successfully confirmed.")
-   
+end
+When(/^I click on "(.*?)"$/) do |arg1|
+    click_on arg1
+end
+Then /^I should see a confirmation page$/ do
+  expect(page).to have_content("Resend confirmation instructions")
+end
+When /^I enter xyz@aaa.com as email id on that page$/ do
+  fill_in "user_email", :with => "xyz@aaa.com"
+end
+When /^I click on Resend confirmation instructions$/ do
+  click_button "Resend confirmation instructions"
+  #expect(page).to have_content("duhd")
+end
+Then /^I should see a error message$/ do
+  expect(page).to have_content("You will receive an email with instructions for how to confirm your email address in a few minutes.")
 end
 Given /^I am on HomePage$/ do
   visit home_path
