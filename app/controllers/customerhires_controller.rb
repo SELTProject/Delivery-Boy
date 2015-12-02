@@ -9,23 +9,23 @@ class CustomerhiresController < ApplicationController
   end
 
   def create
-    logger.debug "Inside create customerhire"
-    logger.debug "Customerhire = "
-    logger.debug customerhire_params
+    # logger.debug "Inside create customerhire"
+    # logger.debug "Customerhire = "
+    # logger.debug customerhire_params
     customerhire = Customerhire.new(customerhire_params)
 
 
     if current_user
       @user = current_user
       @user.customerhires << customerhire
-    else
-      flash[:notice] = "Oops! Please Login to get a driver"
     end
+
+
 
     #customerhire.save
     #@user = current_user
     #@user.driverdetail = driverdetail
-    flash[:notice] = "Your details were successfully created."
+    flash[:notice] = "Delivery Boy will contact you shortly :)"
     redirect_to home_path
   end
 

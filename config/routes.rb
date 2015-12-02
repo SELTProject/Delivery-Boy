@@ -30,6 +30,9 @@ Rails.application.routes.draw do
   get '/customerhires/new' => 'customerhires#new', as: 'new_customerhire'
   post '/customerhires' => 'customerhires#create', as: 'customerhires'
 
+  get '/displayorders/display' => 'displayorders#display', as: 'display_displayorder'
+
+
 
   #match '/login', to: 'sessions#new', via: :get
   #match '/login_create', to: 'sessions#create', via: :post
