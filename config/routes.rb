@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   #resources :businessdetails
   #resources :driverdetails
   match '/home', to: 'visitors#index', via: :get
-
+  match '/about', to: 'visitors#about', via: :get
+  match '/contact', to: 'visitors#contact', via: :get
+  
   #match "/:space_type/:id", :to => "spaces#show", :as => :space_type
 
   get '/businessdetails/new' => 'businessdetails#new', as: 'new_businessdetail'
@@ -31,7 +33,7 @@ Rails.application.routes.draw do
   post '/customerhires' => 'customerhires#create', as: 'customerhires'
 
   get '/displayorders/display' => 'displayorders#display', as: 'display_displayorder'
-
+ # get '/about' => 'visitor#about', as: 'website_about'
 
 
   #match '/login', to: 'sessions#new', via: :get
