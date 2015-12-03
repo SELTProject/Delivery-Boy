@@ -6,21 +6,21 @@
   <div class="form-group">
     <%= f.label :no_items, "No. of Items", class: "col-sm-4 control-label" %>
     <div class="col-sm-6">
-      <%= f.text_field :no_items, class: "form-control", autofocus: true %>
+      <%= f.text_field :no_items, class: "form-control", autofocus: true, required: true %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :restaurant_name, class: "col-sm-4 control-label" %>
+    <%= f.label :restaurant_name, class: "col-sm-4 control-label"%>
     <div class="col-sm-6">
-      <%= f.text_field :restaurant_name, class: "form-control", autofocus: true %>
+      <%= f.text_field :restaurant_name, class: "form-control", autofocus: true, required: true %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :restaurant_address1, class: "col-sm-4 control-label" %>
     <div class="col-sm-6">
-      <%= f.text_field :restaurant_address1, class: "form-control", autofocus: true %>
+      <%= f.text_field :restaurant_address1, class: "form-control", autofocus: true, required: true %>
     </div>
   </div>
 
@@ -34,7 +34,7 @@
   <div class="form-group">
     <%= f.label :restaurant_pin, class: "col-sm-4 control-label" %>
     <div class="col-sm-6">
-      <%= f.text_field :restaurant_pin, class: "form-control", autofocus: true %>
+      <%= f.text_field :restaurant_pin, class: "form-control", autofocus: true, required: true %>
     </div>
   </div>
 
