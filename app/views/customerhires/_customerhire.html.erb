@@ -1,20 +1,32 @@
 <div class = "panel panel-info">
-   <div class = "panel-heading">
-      <h3 class = "panel-title">Orders From Customers</h3>
-   </div>
+    <div class = "panel-heading">
+        <h3 class = "panel-title">Orders From Customers</h3>
+    </div>
 
-   <div class = "panel-body">
-     <div >
-       user_id: <%= customerhire.user_id %>
-       </br>
-      
-       items :<%= customerhire.no_items %>
-       </br>
-       restaurant_name:<%= customerhire.restaurant_name %>
-       </br>
-       Address2: <%= customerhire.restaurant_address2 %>
-       </br>
-       Address Pin: <%= customerhire.restaurant_pin%>
-     </div>
-   </div>
+    <div class = "panel-body">
+        <div class="col-md-12">
+            <div class="col-md-9">
+                customerhire id <%= customerhire.id %>
+                user_id: <%= customerhire.user_id %>
+                </br>
+                items :<%= customerhire.no_items %>
+                </br>
+                restaurant_name:<%= customerhire.restaurant_name %>
+                </br>
+                Address2: <%= customerhire.restaurant_address2 %>
+                </br>
+                Address Pin: <%= customerhire.restaurant_pin%>
+            </div>
+            <div class="col-md-3">
+                <%= form_tag("/accept", method: "post") do %>
+                  <%= hidden_field_tag 'id', customerhire.id %>
+                  <div class="actions">
+                    <div>
+                        <%= submit_tag("Accept") %>
+                    </div>
+                  </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
 </div>

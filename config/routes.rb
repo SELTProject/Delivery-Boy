@@ -33,6 +33,9 @@ Rails.application.routes.draw do
   post '/customerhires' => 'customerhires#create', as: 'customerhires'
 
   get '/displayorders/display' => 'displayorders#display', as: 'display_displayorder'
+  
+  post '/accept' => 'customerhires#accept', as: 'accept'
+  
  # get '/about' => 'visitor#about', as: 'website_about'
 
 

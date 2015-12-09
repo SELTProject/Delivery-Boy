@@ -1,7 +1,8 @@
 class CreateDriverpickups < ActiveRecord::Migration
   def change
     create_table :driverpickups do |t|
-      t.integer :user_id
+      
+      t.integer :customer_id
       t.string :driver_id
 
       t.timestamps null: false
