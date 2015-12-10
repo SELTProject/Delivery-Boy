@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   post '/customerhires' => 'customerhires#create', as: 'customerhires'
 
   get '/displayorders/display' => 'displayorders#display', as: 'display_displayorder'
+  get '/displayorders/accepted' => 'displayorders#accepted', as: 'display_acceptedorder'
   
   post '/accept' => 'customerhires#accept', as: 'accept'
   

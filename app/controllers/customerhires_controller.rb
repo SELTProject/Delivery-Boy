@@ -8,10 +8,11 @@ class CustomerhiresController < ApplicationController
 
   def accept
     id = params[:id]
-    customerhire = Customerhire.find_by_id(id)
+    customerhire = Customerhire.find(id)
     @driverpickup = Driverpickup.new()
     @driverpickup.driver_id = current_user.id
     @driverpickup.customer_id = customerhire.user_id
+    @driverpickup.customerhire_id = customerhire.id
     @driverpickup.save
     customerhire.update(order_status: 'accepted')
     customerhire.save
