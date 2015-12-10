@@ -48,9 +48,10 @@ ActiveRecord::Schema.define(version: 20151204053351) do
 
   create_table "driverpickups", force: :cascade do |t|
     t.integer  "customer_id"
-    t.string   "driver_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "driver_id"
+    t.integer  "customerhire_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "roles", force: :cascade do |t|
