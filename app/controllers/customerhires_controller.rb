@@ -11,6 +11,8 @@ class CustomerhiresController < ApplicationController
     @driverpickup.driver_id = current_user.id
     @driverpickup.customer_id = customerhire.user_id
     @driverpickup.save
+    customerhire.update(order_status: 'accepted')
+    customerhire.save
     flash[:notice] = "Cheers! You have successfully accepted a delivery request. Make the delivery ASAP"
     redirect_to display_displayorder_path
   end
