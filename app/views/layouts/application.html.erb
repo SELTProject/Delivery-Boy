@@ -51,7 +51,7 @@
               <% if session[:user_role] == "businessowner" %>
                 <li><%= link_to 'Business Details', edit_businessdetail_path %></li>
               <% end %>
-              <% if session[:user_raole] == "driver" %>
+              <% if session[:user_role] == "driver" %>
                 <li><%= link_to 'Driver Details', edit_driverdetail_path %></li>
               <% end %>
               <li><%= link_to 'Edit profile', edit_user_registration_path%></li>

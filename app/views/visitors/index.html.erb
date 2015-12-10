@@ -12,8 +12,10 @@
     <div class="col-md-4 col-sm-6">
       <a class = "img-thumbnail img-responsive center-block">
         <img src="<%= asset_path( 'boy.jpg' ) %>" alt="boy" style="width:300px;height:300px">
-        <% if user_signed_in? %>
-        <%= link_to 'CustomerHire', new_customerhire_path %>
+        <% if !user_signed_in?%>
+        <%= link_to 'Get a Dlivery Boy', new_customerhire_path %>
+        <% elsif  user_signed_in? && session[:user_role] == "customer" %>
+        <%= link_to 'Get a Dlivery Boy', new_customerhire_path %>
         <% end %>
       </a>
       <h4>Select your "delivery boy" to deliver the food </h4>
@@ -21,7 +23,11 @@
     <div class="col-md-4 col-sm-6">
       <a class = "img-thumbnail img-responsive center-block">
         <img src="<%= asset_path( 'food.jpg' ) %>" alt="food" style="width:300px;height:300px">
+        <% if !user_signed_in?%>
         <%= link_to 'Display', display_displayorder_path %>
+        <% elsif  user_signed_in? && session[:user_role] == "driver" %>
+        <%= link_to 'Display', display_displayorder_path %>
+        <% end %>
       </a>
       <h4>Food is ready !!!!</h4>
     </div>
