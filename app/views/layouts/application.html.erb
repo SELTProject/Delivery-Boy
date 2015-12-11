@@ -48,14 +48,19 @@
           <ul class="nav navbar-nav pull-right">
             <% if user_signed_in? %>
               <li class="center-align-text"><a href="#"><span class="label label-default">Logged in as <%= current_user.email %>.</span></a></li>
-              <% if session[:user_role] == "businessowner" %>
-                <li><%= link_to 'Business Details', edit_businessdetail_path %></li>
-              <% end %>
-              <% if session[:user_role] == "driver" %>
-                <li><%= link_to 'Driver Details', edit_driverdetail_path %></li>
-              <% end %>
-              <li><%= link_to 'Edit profile', edit_user_registration_path%></li>
-              <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.first_name %> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <% if session[:user_role] == "businessowner" %>
+                    <li><%= link_to 'Business Details', edit_businessdetail_path %></li>
+                  <% end %>
+                  <% if session[:user_role] == "driver" %>
+                    <li><%= link_to 'Driver Details', edit_driverdetail_path %></li>
+                  <% end %>
+                  <li><%= link_to 'Edit profile', edit_user_registration_path%></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
+                </ul>
+              </li>
             <% else %>
               <li><%= link_to "Signup", new_user_registration_path%></li>
               <li><%= link_to "Login", new_user_session_path%></li>
@@ -83,7 +88,7 @@
       </footer>
     </div><!-- /.container -->
 
-    <!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
