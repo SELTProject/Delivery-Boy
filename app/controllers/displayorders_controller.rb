@@ -30,4 +30,24 @@ class DisplayordersController < ApplicationController
     #@customerhire.each { |ch| logger.debug ch}
   end
 
+  def userorders
+    @customerhires=Customerhire.where("user_id = ?", current_user.id)
+  end
+  
+  def useropenorders
+    @customerhires=Customerhire.where('user_id = ? AND order_status = ?', current_user.id, "open")
+  end
+
+  def useracceptedorders
+    @customerhires=Customerhire.where('user_id = ? AND order_status = ?', current_user.id, "accepted")
+  end
+
+  def usercancelledorders
+    @customerhires=Customerhire.where('user_id = ? AND order_status = ?', current_user.id, "cancelled")
+  end
+
+  def userdeliveredorders
+    @customerhires=Customerhire.where('user_id = ? AND order_status = ?', current_user.id, "delivered")
+  end
+  
 end

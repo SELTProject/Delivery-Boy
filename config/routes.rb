@@ -35,10 +35,17 @@ Rails.application.routes.draw do
   get '/displayorders/display' => 'displayorders#display', as: 'display_displayorder'
   get '/displayorders/accepted' => 'displayorders#accepted', as: 'accept_displayorder'
   get '/displayorders/delivered_orders' => 'displayorders#delivered_orders', as: 'delivered_orders_displayorder'
+
+  get '/displayorders/accepted' => 'displayorders#accepted', as: 'display_acceptedorder'
+
+  get '/orders' => 'displayorders#userorders', as: 'userorders'
+  get '/orders/open' => 'displayorders#useropenorders', as: 'useropenorders'
+  get '/orders/accepted' => 'displayorders#useracceptedorders', as: 'useracceptedorders'
+  get '/orders/cancelled' => 'displayorders#usercancelledorders', as: 'usercancelledorders'
+  get '/orders/delivered' => 'displayorders#userdeliveredorders', as: 'userdeliveredorders'
   
   post '/accept' => 'customerhires#accept', as: 'accept'
-  post '/cancel' => 'customerhires#cancel', as: 'cancel'
-  post '/delivered' => 'customerhires#delivered', as: 'delivered'
+
  # get '/about' => 'visitor#about', as: 'website_about'
 
 
