@@ -529,7 +529,23 @@
         null,
         null
       ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/factories/customerhires.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/LocalDeliverySystem/spec/factories/driverdetails.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/factories/driverpickups.rb": [
         1,
         1,
         null,
@@ -564,20 +580,32 @@
         null,
         null,
         1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
         1,
         1,
         null,
+        null,
+        null,
         1,
         1,
         1,
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -642,12 +670,21 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
         null
       ],
       "/home/ubuntu/workspace/LocalDeliverySystem/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/helpers/customerhires_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/helpers/displayorders_helper.rb": [
         1,
         null
       ],
@@ -927,6 +964,66 @@
         null,
         null
       ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/customerhires_controller_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/controllers/customerhires_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/devise/passwords_controller_spec.rb": [
         1,
         null,
@@ -961,6 +1058,25 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/controllers/displayorders_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/controllers/displayorders_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
         null,
         null,
         null,
@@ -1041,6 +1157,40 @@
         null
       ],
       "/home/ubuntu/workspace/LocalDeliverySystem/app/controllers/users_controller.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/helpers/customerhires_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/helpers/displayorders_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
         1,
         null
       ],
@@ -1140,6 +1290,19 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/customerhire_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/models/customerhire.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/driverdetail_spec.rb": [
         1,
         null,
@@ -1170,6 +1333,17 @@
         1,
         1,
         null,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/driverpickup_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/models/driverpickup.rb": [
         1,
         null
       ],
@@ -1236,6 +1410,6 @@
         null
       ]
     },
-    "timestamp": 1448082548
+    "timestamp": 1449725604
   }
 }
