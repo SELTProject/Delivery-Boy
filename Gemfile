@@ -20,6 +20,7 @@ gem 'devise'
 gem "factory_girl_rails", "~> 4.0"
 # Use Haml as the templating library
 gem 'haml'
+gem 'seed_dump'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
