@@ -13,13 +13,47 @@ class CustomerhiresController < ApplicationController
     @driverpickup.driver_id = current_user.id
     @driverpickup.customer_id = customerhire.user_id
     @driverpickup.customerhire_id = customerhire.id
+    @driverpickup.order_status = "accepted"
     @driverpickup.save
     customerhire.update(order_status: 'accepted')
     customerhire.save
     flash[:notice] = "Cheers! You have successfully accepted a delivery request. Make the delivery ASAP"
     redirect_to display_displayorder_path
   end
-  
+
+
+  def cancel
+    id = params[:id]
+    customerhire = Customerhire.find(id)
+    customerhire.update(order_status: 'open')
+    customerhire.save
+
+    driverpickup= Driverpickup.where("customerhire_id = #{id}")
+    driverpickup.each { |dp|
+      if dp.order_status=="accepted"
+        dp.update(order_status: "canceled")
+      end
+      }
+
+    flash[:notice] = "You canceled the order"
+    redirect_to display_displayorder_path
+  end
+
+  def delivered
+    id = params[:id]
+    customerhire = Customerhire.find(id)
+    customerhire.update(order_status: 'delivered')
+    customerhire.save
+
+    driverpickup= Driverpickup.where("customerhire_id = #{id}")
+    driverpickup.each { |dp|
+      if dp.order_status=="accepted"
+         dp.update(order_status: "delivered")
+      end
+      }
+    redirect_to  delivered_orders_displayorder_path
+  end
+
   def new
     @customerhire = Customerhire.new
   end

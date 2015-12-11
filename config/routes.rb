@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   match '/home', to: 'visitors#index', via: :get
   match '/about', to: 'visitors#about', via: :get
   match '/contact', to: 'visitors#contact', via: :get
-  
+
   #match "/:space_type/:id", :to => "spaces#show", :as => :space_type
 
   get '/businessdetails/new' => 'businessdetails#new', as: 'new_businessdetail'
@@ -33,10 +33,12 @@ Rails.application.routes.draw do
   post '/customerhires' => 'customerhires#create', as: 'customerhires'
 
   get '/displayorders/display' => 'displayorders#display', as: 'display_displayorder'
-  get '/displayorders/accepted' => 'displayorders#accepted', as: 'display_acceptedorder'
-  
+  get '/displayorders/accepted' => 'displayorders#accepted', as: 'accept_displayorder'
+  get '/displayorders/delivered_orders' => 'displayorders#delivered_orders', as: 'delivered_orders_displayorder'
+
   post '/accept' => 'customerhires#accept', as: 'accept'
-  
+  post '/cancel' => 'customerhires#cancel', as: 'cancel'
+  post '/delivered' => 'customerhires#delivered', as: 'delivered'
  # get '/about' => 'visitor#about', as: 'website_about'
 
 

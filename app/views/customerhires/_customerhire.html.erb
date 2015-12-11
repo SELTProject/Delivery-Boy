@@ -17,16 +17,41 @@
                 </br>
                 Address Pin: <%= customerhire.restaurant_pin%>
             </div>
-            <div class="col-md-3">
-                <%= form_tag("/accept", method: "post") do %>
-                  <%= hidden_field_tag 'id', customerhire.id %>
-                  <div class="actions">
-                    <div>
-                        <%= submit_tag("Accept") %>
-                    </div>
-                  </div>
-                <% end %>
-            </div>
+            <% if customerhire.order_status == "open" %>
+                <div class="col-md-3">
+                    <%= form_tag("/accept", method: "post") do %>
+                      <%= hidden_field_tag 'id', customerhire.id %>
+                      <div class="actions">
+                        <div>
+                            <%= submit_tag("Accept") %>
+                        </div>
+                      </div>
+                    <% end %>
+                </div>
+            <% elsif customerhire.order_status == "accepted" %>
+                <div class="col-md-3">
+                    <%= form_tag("/cancel", method: "post") do %>
+                      <%= hidden_field_tag 'id', customerhire.id %>
+                      <div class="actions">
+                        <div>
+                            <%= submit_tag("Cancel") %>
+                        </div>
+                      </div>
+                    <% end %>
+                </div>
+
+                <div class="col-md-3">
+                    <%= form_tag("/delivered", method: "post") do %>
+                      <%= hidden_field_tag 'id', customerhire.id %>
+                      <div class="actions">
+                        <div>
+                            <%= submit_tag("delivered") %>
+                        </div>
+                      </div>
+                    <% end %>
+                </div>
+            <% end %>
+
         </div>
     </div>
 </div>

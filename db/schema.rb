@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20151204053351) do
     t.integer  "customer_id"
     t.integer  "driver_id"
     t.integer  "customerhire_id"
+    t.string   "order_status"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

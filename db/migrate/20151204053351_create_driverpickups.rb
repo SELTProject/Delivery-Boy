@@ -4,6 +4,7 @@ class CreateDriverpickups < ActiveRecord::Migration
       t.integer :customer_id
       t.integer :driver_id
       t.integer :customerhire_id
+      t.string  :order_status
       t.timestamps null: false
     end
   end

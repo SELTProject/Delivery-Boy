@@ -27,6 +27,8 @@
         <%= link_to 'Display', display_displayorder_path %>
         <% elsif  user_signed_in? && session[:user_role] == "driver" %>
         <%= link_to 'Display', display_displayorder_path %>
+        <%= link_to 'Accepted', accept_displayorder_path %>
+        <%= link_to 'delivered', delivered_orders_displayorder_path %>
         <% end %>
       </a>
       <h4>Food is ready !!!!</h4>
