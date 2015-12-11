@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   get '/displayorders/display' => 'displayorders#display', as: 'display_displayorder'
   get '/displayorders/accepted' => 'displayorders#accepted', as: 'accept_displayorder'
   get '/displayorders/delivered_orders' => 'displayorders#delivered_orders', as: 'delivered_orders_displayorder'
-
+  
   post '/accept' => 'customerhires#accept', as: 'accept'
   post '/cancel' => 'customerhires#cancel', as: 'cancel'
   post '/delivered' => 'customerhires#delivered', as: 'delivered'
