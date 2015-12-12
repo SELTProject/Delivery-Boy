@@ -6,6 +6,7 @@ RSpec.describe Customerhire, type: :model do
     id: nil, user_id: nil, no_items:1, restaurant_name: "Pancheros",restaurant_address1:"abcd", restaurant_address2:"abcd", restaurant_pin: "52246", order_status: "open", created_at: nil, updated_at: nil )
     expect(customerh).to be_valid
   end
+  
 
   it "is invalid without a number of items" do
    customerh = Customerhire.new(no_items: nil)

@@ -7,6 +7,8 @@ RSpec.describe DisplayordersController, type: :controller do
     #  expect("customerhire").to receive(:new)
       #get :display
     #  expect(response).to receive()
+   
+    
     end
   end
 end

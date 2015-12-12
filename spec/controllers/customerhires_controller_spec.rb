@@ -1,5 +1,3 @@
-
-
 require 'rails_helper'
 require 'spec_helper'
 
@@ -16,14 +14,7 @@ RSpec.describe CustomerhiresController, type: :controller do
   end
   
  
-   describe "Customer Hire 1" do
-    it "Customer Hire new page" do
-    #  expect(Customerhire).to receive(:new)
-    #  expect("customerhire").to receive(:new)
-    # get :new
-
-    end
-  end
+  
   describe "Valid Item number"
   it "No of items empty" do
    customerh = Customerhire.new(no_items: nil)
@@ -36,6 +27,12 @@ RSpec.describe CustomerhiresController, type: :controller do
    customerh = Customerhire.new(restaurant_name: nil)
    customerh.valid?
    expect(customerh.errors[:restaurant_name]).to include("can't be blank")
+  end
+  
+   it "Create customerhire" do
+   customerh = Customerhire.create(no_items:1, restaurant_name: "Pancheros",restaurant_address1:"abcd", restaurant_address2:"abcd", restaurant_pin: "1234")
+   
+   expect(flash[:notice]).to eq(nil)
   end
   
   
@@ -56,6 +53,8 @@ RSpec.describe CustomerhiresController, type: :controller do
    customerh.valid?
     expect(flash[:notice]).to eq(nil)
   end
+ 
+  
     
 
 end
