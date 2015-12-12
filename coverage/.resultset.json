@@ -979,6 +979,8 @@
         null,
         1,
         1,
+        null,
+        null,
         1,
         1,
         1,
@@ -1347,6 +1349,55 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/customerhire_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/LocalDeliverySystem/app/models/customerhire.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/home/ubuntu/workspace/LocalDeliverySystem/spec/models/driverdetail_spec.rb": [
         1,
         null,
@@ -1452,14 +1503,8 @@
         null,
         null,
         null
-      ],
-      "/home/ubuntu/workspace/LocalDeliverySystem/app/models/customerhire.rb": [
-        1,
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1449882793
+    "timestamp": 1449884450
   }
 }

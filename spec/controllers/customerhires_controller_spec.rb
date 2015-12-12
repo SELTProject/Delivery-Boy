@@ -52,7 +52,7 @@ RSpec.describe CustomerhiresController, type: :controller do
    expect(customerh.errors[:restaurant_pin]).to include("can't be blank")
   end
    it "Everything is valid" do
-   customerh = Customerhire.new(no_items:1, restaurant_name: "Pancheros",restaurant_address1:"abcd", restaurant_pin: nil)
+   customerh = Customerhire.new(no_items:1, restaurant_name: "Pancheros",restaurant_address1:"abcd", restaurant_address2:"abcd", restaurant_pin: "1234")
    customerh.valid?
     expect(flash[:notice]).to eq(nil)
   end
