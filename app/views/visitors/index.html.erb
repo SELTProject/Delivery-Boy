@@ -13,9 +13,9 @@
       <a class = "img-thumbnail img-responsive center-block">
         <img src="<%= asset_path( 'boy.jpg' ) %>" alt="boy" style="width:300px;height:300px">
         <% if !user_signed_in?%>
-        <%= link_to 'Get a Dlivery Boy', new_customerhire_path %>
+        <%= link_to 'Get a Delivery Boy', new_customerhire_path %>
         <% elsif  user_signed_in? && session[:user_role] == "customer" %>
-        <%= link_to 'Get a Dlivery Boy', new_customerhire_path %>
+        <%= link_to 'Get a Delivery Boy', new_customerhire_path %>
         <% end %>
       </a>
       <h4>Delivery boy will deliver the food </h4>
