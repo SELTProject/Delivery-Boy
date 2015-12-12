@@ -3,7 +3,7 @@ class DisplayordersController < ApplicationController
 
   def display
     #@customerhires=Customerhire.find_by_order_status("open")
-    @customerhires=Customerhire.where('order_status = "open"')
+    @customerhires=Customerhire.where("order_status = \'open\'")
     logger.debug @customerhires
     #@customerhire.each { |ch| logger.debug ch}
   end
@@ -11,8 +11,8 @@ class DisplayordersController < ApplicationController
   def accepted
     # @driverpickups = Driverpickup.where('driver_id = current_user.id')
     # @customerhires=Customerhire.find_by_order_status("accepted")
-    @customerhires = Customerhire.joins('join driverpickups on customerhires.id = driverpickups.customerhire_id and customerhires.order_status = "accepted" and driverpickups.order_status = "accepted" and driverpickups.driver_id = ' + current_user.id.to_s)
-             .select('customerhires.id, customerhires.user_id, customerhires.no_items, customerhires.restaurant_name, customerhires.restaurant_address1, customerhires.restaurant_address2, customerhires.restaurant_pin, customerhires.order_status, customerhires.created_at, customerhires.updated_at')
+    @customerhires = Customerhire.joins("join driverpickups on customerhires.id = driverpickups.customerhire_id and customerhires.order_status = \'accepted\' and driverpickups.order_status = \'accepted\' and driverpickups.driver_id = " + current_user.id.to_s)
+             .select("customerhires.id, customerhires.user_id, customerhires.no_items, customerhires.restaurant_name, customerhires.restaurant_address1, customerhires.restaurant_address2, customerhires.restaurant_pin, customerhires.order_status, customerhires.created_at, customerhires.updated_at")
     logger.debug "--------------------------------"
     logger.debug @customerhires
     #@customerhire.each { |ch| logger.debug ch}
@@ -22,8 +22,8 @@ class DisplayordersController < ApplicationController
     # @driverpickups = Driverpickup.where('driver_id = current_user.id')
     # @customerhires=Customerhire.find_by_order_status("accepted")
 
-    @customerhires = Customerhire.joins('join driverpickups on customerhires.id = driverpickups.customerhire_id and customerhires.order_status = "delivered" and driverpickups.order_status = "delivered" and driverpickups.driver_id = ' + current_user.id.to_s)
-             .select('customerhires.id, customerhires.user_id, customerhires.no_items, customerhires.restaurant_name, customerhires.restaurant_address1, customerhires.restaurant_address2, customerhires.restaurant_pin, customerhires.order_status, customerhires.created_at, customerhires.updated_at')
+    @customerhires = Customerhire.joins("join driverpickups on customerhires.id = driverpickups.customerhire_id and customerhires.order_status = \'delivered\' and driverpickups.order_status = \'delivered\' and driverpickups.driver_id = " + current_user.id.to_s)
+             .select("customerhires.id, customerhires.user_id, customerhires.no_items, customerhires.restaurant_name, customerhires.restaurant_address1, customerhires.restaurant_address2, customerhires.restaurant_pin, customerhires.order_status, customerhires.created_at, customerhires.updated_at")
 
     logger.debug @customerhires
     #@customerhire.each { |ch| logger.debug ch}
@@ -34,19 +34,19 @@ class DisplayordersController < ApplicationController
   end
 
   def useropenorders
-    @customerhires=Customerhire.where('user_id = ? AND order_status = ?', current_user.id, "open")
+    @customerhires=Customerhire.where("user_id = ? AND order_status = ?", current_user.id, 'open')
   end
 
   def useracceptedorders
-    @customerhires=Customerhire.where('user_id = ? AND order_status = ?', current_user.id, "accepted")
+    @customerhires=Customerhire.where("user_id = ? AND order_status = ?", current_user.id, 'accepted')
   end
 
   def usercancelledorders
-    @customerhires=Customerhire.where('user_id = ? AND order_status = ?', current_user.id, "cancelled")
+    @customerhires=Customerhire.where("user_id = ? AND order_status = ?", current_user.id, 'cancelled')
   end
 
   def userdeliveredorders
-    @customerhires=Customerhire.where('user_id = ? AND order_status = ?', current_user.id, "delivered")
+    @customerhires=Customerhire.where("user_id = ? AND order_status = ?", current_user.id, 'delivered')
   end
 
 end
