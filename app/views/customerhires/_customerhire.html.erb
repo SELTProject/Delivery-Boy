@@ -1,17 +1,14 @@
 <div class = "panel panel-info">
     <div class = "panel-heading">
-        <h3 class = "panel-title">Orders From Customers</h3>
+        <h3 class = "panel-title">Order from <%= User.find(customerhire.user_id).first_name %> </h3>
     </div>
 
     <div class = "panel-body">
         <div class="col-md-12">
             <div class="col-md-9">
-                customerhire id <%= customerhire.id %>
-                user_id: <%= customerhire.user_id %>
+                Items :<%= customerhire.no_items %>
                 </br>
-                items :<%= customerhire.no_items %>
-                </br>
-                restaurant_name:<%= customerhire.restaurant_name %>
+                Restaurant_name:<%= customerhire.restaurant_name %>
                 </br>
                 Address2: <%= customerhire.restaurant_address2 %>
                 </br>
@@ -23,32 +20,34 @@
                       <%= hidden_field_tag 'id', customerhire.id %>
                       <div class="actions">
                         <div>
-                            <%= submit_tag("Accept") %>
+                            <%= submit_tag("Accept" , class: "btn btn-md btn-success") %>
                         </div>
                       </div>
                     <% end %>
                 </div>
             <% elsif customerhire.order_status == "accepted" %>
                 <div class="col-md-3">
+                  <div class="col-md-6">
                     <%= form_tag("/cancel", method: "post") do %>
                       <%= hidden_field_tag 'id', customerhire.id %>
                       <div class="actions">
                         <div>
-                            <%= submit_tag("Cancel") %>
+                            <%= submit_tag("Cancel",class: "btn btn-md btn-danger") %>
                         </div>
                       </div>
                     <% end %>
-                </div>
+                  </div>
 
-                <div class="col-md-3">
+                  <div class="col-md-6">
                     <%= form_tag("/delivered", method: "post") do %>
                       <%= hidden_field_tag 'id', customerhire.id %>
                       <div class="actions">
                         <div>
-                            <%= submit_tag("delivered") %>
+                            <%= submit_tag("delivered",class: "btn btn-md btn-primary") %>
                         </div>
                       </div>
                     <% end %>
+                  </div>
                 </div>
             <% end %>
 

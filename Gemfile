@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Add bcrypt (~> 3.1.7) to Gemfile to use #has_secure_password:
 #gem 'bcrypt', '~> 3.1.7'
-
+gem 'jquery-turbolinks'
 #A gem devise
 gem 'devise'
 gem "factory_girl_rails", "~> 4.0"

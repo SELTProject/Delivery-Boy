@@ -43,9 +43,10 @@ Rails.application.routes.draw do
   get '/orders/accepted' => 'displayorders#useracceptedorders', as: 'useracceptedorders'
   get '/orders/cancelled' => 'displayorders#usercancelledorders', as: 'usercancelledorders'
   get '/orders/delivered' => 'displayorders#userdeliveredorders', as: 'userdeliveredorders'
-  
-  post '/accept' => 'customerhires#accept', as: 'accept'
 
+  post '/accept' => 'customerhires#accept', as: 'accept'
+  post '/cancel' => 'customerhires#cancel', as: 'cancel'
+  post '/delivered' => 'customerhires#delivered', as: 'delivered'
  # get '/about' => 'visitor#about', as: 'website_about'
 
 
