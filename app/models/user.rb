@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   has_one :driverdetail
   has_one :businessdetail
   has_many :customerhires
-
   attr_accessor :rid
   validates :first_name, :last_name, presence: true
 end

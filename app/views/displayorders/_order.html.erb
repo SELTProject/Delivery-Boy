@@ -1,16 +1,14 @@
 <div class = "panel panel-info">
     <div class = "panel-heading">
-        <h3 class = "panel-title">Orders From Customers</h3>
+        <h3 class = "panel-title">My Orders</h3>
     </div>
     <div class = "panel-body">
         <div class="col-md-12">
             <div class="col-md-9">
-                customerhire id <%= order.id %>
-                user_id: <%= order.user_id %>
                 </br>
-                items :<%= order.no_items %>
+                Items :<%= order.no_items %>
                 </br>
-                restaurant_name:<%= order.restaurant_name %>
+                Restaurant_name:<%= order.restaurant_name %>
                 </br>
                 Address2: <%= order.restaurant_address2 %>
                 </br>
@@ -20,33 +18,12 @@
                 <div class="col-md-3">
                     <%= form_tag("/accept", method: "post") do %>
                       <%= hidden_field_tag 'id', order.id %>
-                      <div class="actions">
-                        <div>
-                            <%= submit_tag("Accept") %>
-                        </div>
-                      </div>
                     <% end %>
                 </div>
             <% elsif order.order_status == "accepted" %>
                 <div class="col-md-3">
                     <%= form_tag("/cancel", method: "post") do %>
                       <%= hidden_field_tag 'id', order.id %>
-                      <div class="actions">
-                        <div>
-                            <%= submit_tag("Cancel") %>
-                        </div>
-                      </div>
-                    <% end %>
-                </div>
-
-                <div class="col-md-3">
-                    <%= form_tag("/delivered", method: "post") do %>
-                      <%= hidden_field_tag 'id', order.id %>
-                      <div class="actions">
-                        <div>
-                            <%= submit_tag("delivered") %>
-                        </div>
-                      </div>
                     <% end %>
                 </div>
             <% end %>

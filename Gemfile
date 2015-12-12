@@ -11,7 +11,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
 # Add bcrypt (~> 3.1.7) to Gemfile to use #has_secure_password:
 #gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-turbolinks'
