@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe Businessdetail, type: :model do
@@ -19,9 +18,12 @@ RSpec.describe Businessdetail, type: :model do
    expect(businessdetail.errors[:business_name]).to include("can't be blank")
   end
 
+
+
   it "is invalid without a address_line_1" do
    businessdetail = Businessdetail.new(address_line_1: nil)
    businessdetail.valid?
+   
    expect(businessdetail.errors[:address_line_1]).to include("can't be blank")
   end
 
@@ -31,17 +33,20 @@ RSpec.describe Businessdetail, type: :model do
    expect(businessdetail.errors[:zip_code]).to include("can't be blank")
   end
 
+
   it "is invalid without a city" do
    businessdetail = Businessdetail.new(city: nil)
    businessdetail.valid?
    expect(businessdetail.errors[:city]).to include("can't be blank")
   end
 
+
   it "is invalid without a state" do
    businessdetail = Businessdetail.new(state: nil)
    businessdetail.valid?
    expect(businessdetail.errors[:state]).to include("can't be blank")
   end
+
 
   it "is invalid without a country" do
    businessdetail = Businessdetail.new(country: nil)
