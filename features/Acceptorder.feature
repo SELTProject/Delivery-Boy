@@ -24,7 +24,25 @@ I want to have a edit my profile feature
     And I have entered the email "bbc.bbc@gmail.com" and the password "123456789"
     And I press Login button
     
-Scenario: Accept Orders
+Scenario: Open Orders
   Given I am on openorders
-  When I press Accept
-  Then I must have updated password
+  Then I must see Current openorders
+  
+Scenario: All Orders
+  Given I am on allorders
+  Then I must see allorders
+
+Scenario: Cancelled Orders
+  Given I am on cancelledorder page
+  Then I should cancelled order
+  
+Scenario: Accepted Orders
+  Given I am on acceptedorder page
+  Then I should accepted order
+  
+Scenario: Delivered Orders
+  Given I am on deliveredorder page
+  Then I should see Delivered order
+  
+  
+  

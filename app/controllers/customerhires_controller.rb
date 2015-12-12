@@ -1,7 +1,10 @@
 class CustomerhiresController < ApplicationController
 
   before_action :authenticate_user!, only: [:create,:new]
-
+  
+  def new
+    @customerhire = Customerhire.new
+  end
   def customerhire_params
     params.require(:customerhire).permit(:no_items, :restaurant_name,:restaurant_address1,:restaurant_address2,:restaurant_pin)
   end
@@ -20,9 +23,9 @@ class CustomerhiresController < ApplicationController
     redirect_to display_displayorder_path
   end
   
-  def new
-    @customerhire = Customerhire.new
-  end
+  #def new
+  #  @customerhire = Customerhire.new
+ # end*/
 
   def create
     # logger.debug "Inside create customerhire"
