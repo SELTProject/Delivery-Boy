@@ -19,7 +19,6 @@ class BusinessdetailsController < ApplicationController
     flash[:notice] = "Your details were successfully created."
     redirect_to home_path
   end
-
   def edit
     @businessdetail = current_user.businessdetail
   end
