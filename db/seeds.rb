@@ -6,7 +6,7 @@ User.create!([
 User::HABTM_Roles.create!([
   {user_id: 1, role_id: 2},
   {user_id: 2, role_id: 1},
-  {user_id: 3, role_id: 1}
+  {user_id: 3, role_id: 2}
 ])
 Customerhire.create!([
   {user_id: 3, no_items: 4, restaurant_name: "mesa", restaurant_address1: "1sdasda", restaurant_address2: "asdadas", restaurant_pin: 123213, order_status: "open"},
