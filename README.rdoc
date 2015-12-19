@@ -1,28 +1,31 @@
-== README
+== Delivery Boy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* DESCRIPTION
 
-Things you may want to cover:
+A web based application which is a marketplace to hire drivers for delivery by customers and restaurant owners.
+It help drivers to find new opportunities, customers to get their orders at their doorstep as well as restaurant owners to find drivers for delivery.
 
-* Ruby version
+* TOOLS AND FRAMEWORKS
 
-* System dependencies
+Rails is a web application framework written in Ruby. It is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages. 
 
-* Configuration
+Bootstrap is a free and open-source collection of tools for creating websites and web applications. It aims to ease the development of web applications.
 
-* Database creation
+Cucumber is a software tool is used for testing other software. It runs automated acceptance tests written in a behavior-driven development (BDD) style. 
 
-* Database initialization
+Devise is a flexible authentication solution for Rails. It is a complete MVC solution. It allows you to have multiple models signed in at the same time
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Capybara helps you test web applications by simulating how a real user would interact with your app.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+* FUTURE WORK
+
+Social integration.
+
+Reviews.
+
+Estimated Delivery Time.
+
+Mobile App.
+
